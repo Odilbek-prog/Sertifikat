@@ -1,63 +1,56 @@
 import "./App.scss";
 import React from "react";
-import logo1 from "./assets/ilmhub.png";
-import logo2 from "./assets/itpark.png";
-import logo3 from "./assets/qrcode.png";
+import logo from "./assets/logo.png";
+import kid from "./assets/kid.png";
+import rabbit from "./assets/rabbit.webp";
+import qrcode from "./assets/qrcode.png";
+import pecat from "./assets/pecat.png";
 
 function App() {
   return (
     <>
       <button className="btn">Download PDF</button>
-      <div
-        className="card"
-        id="card"
-        style={{
-          borderRadius: 4,
-          margin: 0,
-          padding: "2em",
-          boxShadow: "rgba(0, 0, 0, 0.1) 0px 4px 8px",
-        }}
-      >
-        <div className="hdr">
-          <img src={logo1} alt="Logo 1" id="logo1" />
-          <img src={logo2} alt="Logo 2" id="logo2" />
-          <img src={logo3} alt="" />
-        </div>
-        <p className="sub">MALAKA OSHIRGANLIK HAQIDA</p>
-        <p className="ttl">SERTIFIKAT</p>
-        <p className="nm" id="certificate-name">
-          Moxira Alixanova
-        </p>
-        <p className="desc" id="certificate-description">
-          Davlat va xo'jalik boshqaruvi, mahalliy davlat hokimiyati organlari,
-          tashkilotlar va idoralarning xodimlari uchun" jami{" "}
-          <strong id="learning-hours">24</strong> soatlik malaka oshirish
-          kursini muvaffaqiyatli yakunladi
-        </p>
-        <p className="sub" id="certificate-dates">
-          2024-11-11 ~ 2024-11-25
-        </p>
-        <div className="ft">
-          <div className="ft-l">
-            <img
-              src="https://ilmhubuz.github.io/static/images/ilmhub-digital-stamp.png"
-              alt="Digital Stamp"
-              className="ov-img"
-              id="digital-stamp"
-            />
-            <img
-              src="https://ilmhubuz.github.io/static/images/davron-signature.png"
-              alt="Signature"
-              className="ov-img"
-              id="signature"
-            />
+      <div className="card">
+        <header className="card__header">
+          <img className="card__img" src={rabbit} alt="" />
+          <div className="card__head">
+            <h1 className="card__title">Certificate</h1>
+            <h3 className="card__subtitle">of Graduation</h3>
           </div>
-          <div className="ft-r">
-            <span className="nm" id="certificate-id">
-              0f49c
-            </span>
-          </div>
+          <img className="card__img" src={qrcode} alt="" />
+        </header>
+        <div className="card__banner">This Award is Presented to</div>
+        <div className="card__name">
+          <h1 className="card__subtitle">Munzira Nuriddinova</h1>
+          <hr className="card__hr" />
         </div>
+        <p className="card__subdesc">
+          In Recognition of Successfully Completing the Phonics Cue 2 Program
+        </p>
+        <p className="card__desc">
+          For your hard work, enthusiasm, and remarkable growth throughout this
+          program. Your curiosity, creativity, and joyful spirit have made this
+          period truly special. Congratulations on your outstanding
+          achievements!
+        </p>
+        <footer className="card__footer">
+          <img src={kid} alt="" className="card__img" />
+          <div className="card__foot">
+            <i className="card__author">Ms.Iroda</i>
+            <hr />
+            <p className="card__date">Mentor</p>
+          </div>
+          <div className="card__logo">
+            <img src={logo} alt="" className="card__img" />
+            <p className="card__subtitle">ilmhub o'quv markazi</p>
+          </div>
+          <div className="card__foot">
+            <h4 className="card__author">Davron A.</h4>
+            <hr />
+            <p className="card__date">Director</p>
+          </div>
+          <img src={pecat} alt="" className="card__img" />
+        </footer>
       </div>
     </>
   );

@@ -1,13 +1,3 @@
-:root {
-  --h: 80vh;
-  --w: calc(80vh / 1.414);
-  --i-h: calc(var(--h) * 0.1);
-  --t-fs: calc(var(--h) * 0.06);
-  --s-fs: calc(var(--h) * 0.02);
-  --n-fs: calc(var(--h) * 0.03);
-  --d-fs: calc(var(--h) * 0.02);
-}
-
 body,
 html {
   height: 100%;
@@ -18,7 +8,7 @@ html {
   align-items: center;
   background-color: #1c1627;
   box-sizing: border-box;
-  font-family: "Poppins", serif;
+
   .btn {
     background-color: #007bff;
     color: white;
@@ -32,7 +22,7 @@ html {
     display: inline-block;
     transition: background-color 0.3s;
     width: 50%;
-    max-width: calc(var(--w) * 0.5);
+    max-width: calc(calc(80vh / 1.414) * 0.5);
     margin-bottom: 20px;
     margin-left: 14vh;
     &:hover {
@@ -40,8 +30,8 @@ html {
     }
   }
   .card {
-    height: var(--h);
-    width: var(--w);
+    height: 80vh;
+    width: calc(80vh / 1.414);
     max-width: 100%;
     max-height: 100%;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
@@ -52,74 +42,90 @@ html {
     display: flex;
     flex-direction: column;
     align-items: center;
-  }
+    gap: 50px;
+    &__header {
+      display: flex;
+      gap: 30px;
+    }
+    &__img {
+      width: 80px;
+    }
+    &__title {
+      color: #20423a;
+    }
+    &__head {
+      text-align: center;
+    }
+    &__subtitle {
+      color: #fccd0a;
+    }
+    &__banner {
+      background-color: #004d40; /* Yashil fon rangi */
+      color: #ffffff; /* Oq matn rangi */
+      padding: 5px 15px; /* Matnning atrofidagi bo'sh joy */
+      font-family: "Cagliostro", serif;
+      font-size: 10px; /* Matn o'lchami */
+      font-weight: bold; /* Matn qalinligi */
+      text-align: center; /* Matnni o'rtalash */
+      display: inline-block; /* Matnni orqa foniga moslashtirish */
+      clip-path: polygon(
+        0% 0%,
+        /* Chap yuqori burchak */ 100% 0%,
+        /* O'ng yuqori burchak */ 95% 50%,
+        /* O'ng markaz (ichkariga kirgan) */ 100% 100%,
+        /* O'ng pastki burchak */ 0% 100%,
+        /* Chap pastki burchak */ 5% 50% /* Chap markaz (ichkariga kirgan) */
+      );
+    }
+    &__name {
+      font-size: larger;
+      letter-spacing: 1px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+    }
+    &__hr {
+      width: 90%;
+    }
+    &__subdesc {
+      font-size: 12px;
+      width: 60%;
+      text-align: center;
+    }
+    &__desc {
+      font-family: "Cagliostro", serif;
+      font-size: 10px;
+      text-align: center;
+    }
+    &__footer {
+      display: flex;
+      align-items: end;
+      gap: 10px;
+    }
+    &__foot {
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+    }
 
-  .hdr {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 1em;
-    img,
-    .qr {
-      height: var(--i-h);
+    &__author {
+      font-family: "Playwrite AU SA", serif;
+      width: 75px;
+      font-size: 14px;
     }
-  }
-  .sub {
-    font-weight: 400;
-    font-size: var(--s-fs);
-    text-align: center;
-    color: grey;
-    margin-top: 0.5em;
-  }
-  .ttl {
-    font-weight: 500;
-    font-size: var(--t-fs);
-    text-align: center;
-    letter-spacing: 0.3em;
-    margin: 16px 0 39px 0;
-  }
-  .nm {
-    font-weight: 700;
-    font-size: var(--n-fs);
-    text-align: center;
-    margin: 20px 0 20px 0;
-  }
-  .desc {
-    font-size: var(--d-fs);
-    text-align: center;
-    margin: 12px 0 12px 0;
-  }
-  .sub {
-    font-weight: 400;
-    font-size: var(--s-fs);
-    text-align: center;
-    color: grey;
-    margin: 7px 0 13px 0;
-  }
-  .ft {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-top: calc(--h * 0.1);
-  }
-  .ft-l {
-    position: relative;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-    .ov-img {
-      position: absolute;
-      width: var(--i-h);
-      height: auto;
-      top: calc(--h * 0.2);
-      left: 15%;
-      transform: translateX(-50%);
+    &__date {
+      font-family: "Cagliostro", serif;
+      font-size: 10px;
+      text-align: center;
     }
-  }
-  .ft-r {
-    font-size: var(--n-fs);
+    &__logo {
+      font-size: 10px;
+      width: 95px;
+    }
+    &__img:nth-child(5) {
+      position: relative;
+      right: 50px;
+    }
   }
 }
